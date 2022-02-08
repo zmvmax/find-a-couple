@@ -1,0 +1,27 @@
+.hide{
+	visibility: hidden;
+}
+.off{
+	display: none;
+}
+.playField{
+	width: 500px;
+}
+.closed{
+	filter: invert(50%);
+	transition: 0.5s;
+	transform: rotateY(180deg);
+}
+.opened{
+	filter: invert(0%);
+	transition: 0.5s;
+	transform: rotateY(0deg);
+}
+.bordered{
+	border:2px solid black;
+	margin:3px;
+}
+.size{
+	width: 90px;
+	height:90px;
+}
