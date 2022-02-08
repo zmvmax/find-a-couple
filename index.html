@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Cards</title>
 </head>
 <body>
-    <div class="aboutGame">
-        <div class="gameLabel"><h2>Игра "Карточки"</h2></div>
-        <div class="instruction">
-            <h4>Инструкция к игре</h4>
-            <p>Перед началом игры выбирается режим</p>
-            <p>Всего режимов два: таймер обратного отсчета, подсчет длительности раунда в секундах для таблицы рекордов</p>
-            <p>Затем вы выбираете уровень сложности или размер поля</p>
-            <p>Уровней сложности три: простой, средний, сложный</p>
-            <p>Простой уровень: по умолчанию используется случайное количество до 6 пар карт и нужно находить одинаковые две карты</p>
-            <p>Средний уровень: по умолчанию используется случайное количество 10-30 троек карт и нужно найти одинаковые три карты</p>
-            <p>Сложный уровень: по умолчанию используется случайное количество 10-20 четверок карт и нужно найти одинаковые четыре карты</p>
-            <p>Количество карт выдается всегда случайно в заданном диапазоне уровня сложности</p>
-        </div>
-        <input type="text" >
-    </div>
-
-    <span>Выберите уровень сложности: </span>
-    <select name="" id="hard">
-        <option value="">Простой</option>
-        <option value="">Средний</option>
-        <option value="">Сложный</option>
-    </select>
-    <input type="button" id="createtable" value="выбрать">
-
-
-
-    <script src="js/script.js"></script>
-    <script src="js/table.js"></script>
+	<div class="gameInfoWrap">
+		<h2>Игра "Карточки"</h2>
+		<div class="instructions">
+			<p>Перед началом игры нужно выбрать режим</p>
+			<p>Режимов два: с таймером обратного отсчета, подсчетом длительности раунда в секундах для таблицы рекордов</p>
+			<p>После вы указываете размер поля или уровень сложности (простой, средний, сложный)</p>
+			<p>Простой уровень: по умолчанию используется случайное количество до 6 пар карт и нужно находить одинаковые 2 карты</p>
+			<p>Средний уровень: по умолчанию используется случайное количество 10-30 троек карт и нужно найти одинаковые 3 карты</p>
+			<p>Сложный уровень: по умолчанию используется случайное количество 10-20 четверок карт и нужно найти одинаковые 4 карты</p>
+			<p>Количество карт выдается всегда случайно в заданном диапазоне</p>
+		</div>
+		<input type="button" class="removeGameInfo" value="Начать">
+	</div>
+	<div class="chooseModeWrap off">
+		<h3>Выберите режим игры</h3>
+		<form>
+			<input type="radio" class="mode1">
+			<span>Таймер обратного отсчета</span>
+			<input type="radio" class="mode2">
+			<span>Подсчет длительности раунда</span><br><br>
+			<input type="button" value="Продолжить" class="removeChooseMode">
+		</form>
+	</div>
+	<div class="chooseTypeWrap off">
+		<h3>Выберите количество карт, либо уровень сложности</h3>
+		<form>
+			<input type="radio" class="type1">
+			<span>Выбрать размер</span>
+			<input type="radio" class="type2">
+			<span>Выбрать уровни сложности</span><br><br>
+			<input type="button" value="Продолжить" class="getChosenType">
+		</form>
+	</div>
+		<div class="chooseDifficultyWrap off">
+			<h3>Выберите количество карт</h3>
+			<input type="radio" class="difficulty1">
+			<span>Простой</span>
+			<input type="radio" class="difficulty2">
+			<span>Средний</span>
+			<input type="radio" class="difficulty3">
+			<span>Сложный</span><br><br>
+			<input type="button" value="Продолжить" class="getChosenDifficulty">
+		</div>
+		<div class="chooseSizeWrap off">
+			<h3>Выберите сложность</h3>
+			<input type="radio" class="size1">
+			<span>4x4</span>
+			<input type="radio" class="size2">
+			<span>5x6</span>
+			<input type="radio" class="size3">
+			<span>4x6</span><br><br>
+			<input type="button" value="Продолжить" class="getChosenSize">
+		</div>
+		<div class="playField">
+			
+		</div>
+	<script src="js/script.js"></script>
+	<script src="js/generate.js"></script>
 </body>
 </html>
